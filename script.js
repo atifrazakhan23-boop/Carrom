@@ -590,8 +590,15 @@ function loop() {
         // Start pocket animation and update score immediately
         startPocketAnimation(c, pocket);
         // Simple scoring: +10 per coin sunk
-        score += 10;
-        scoreEl.textContent = score.toString();
+        if (c.color === '#fefefe') {
+  score += 20;
+} else if (c.color === '#222222') {
+  score += 10;
+} else {
+  score += 30;
+}
+
+scoreEl.textContent = score.toString();
       }
     });
 
@@ -862,3 +869,4 @@ canvas.addEventListener("touchend",()=>{
 
 
 },{passive:false});
+
