@@ -24,9 +24,9 @@ const playRight = WIDTH - margin;
 const playBottom = HEIGHT - margin;
 const boardCenter = { x: WIDTH / 2, y: HEIGHT / 2 };
 
-// Pocket configuration
-const pocketRadius = 22;
-const pocketInnerRadius = 16;
+// Pocket configuration (FIXED SIZE)
+const pocketRadius = 36;
+const pocketInnerRadius = 28;
 
 // Coin / striker sizes
 const coinRadius = 16;
@@ -859,5 +859,6 @@ canvas.addEventListener("touchend",()=>{
   isAiming=false;
   aimStart=null;
   aimCurrent=null;
+
 
 },{passive:false});
