@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+background:
+radial-gradient(circle at top, #fdfaf3 0%, #e3d4bb 35%, transparent 60%),
+radial-gradient(circle at bottom, #c6a988 0%, #8b6a46 55%, #3b2819 100%);
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #2c2415;
+
+/* mobile scroll fix */
+overflow: hidden;
+touch-action: none;
+}
+
+.game-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+padding: 12px;
+}
+
+.hud {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 24px;
+background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,239,221,0.95));
+padding: 10px 20px;
+border-radius: 999px;
+box-shadow:
+0 18px 35px rgba(0,0,0,0.35),
+0 0 0 1px rgba(255,255,255,0.7),
+0 0 40px rgba(255,255,255,0.12);
+backdrop-filter: blur(5px);
+}
+
+.hud-item {
+font-weight: 600;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+
+.label {
+opacity: 0.7;
+}
+
+.btn {
+border: none;
+border-radius: 999px;
+background: linear-gradient(135deg, #b85c38, #8b3b26);
+color: #fdf6e3;
+padding: 8px 16px;
+font-weight: 600;
+cursor: pointer;
+box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.15s ease;
+}
+
+.btn:hover {
+filter: brightness(1.05);
+box-shadow: 0 6px 14px rgba(0,0,0,0.28);
+}
+
+.btn:active {
+transform: translateY(1px);
+box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+.board-wrapper {
+margin-top: 10px;
+padding: 20px;
+border-radius: 32px;
+background: radial-gradient(circle at top left, #e6d1a3 0%, #b4884d 45%, #8c6239 100%);
+box-shadow:
+0 22px 40px rgba(0,0,0,0.45),
+inset 0 0 0 1px rgba(255,255,255,0.4),
+inset 0 0 0 12px rgba(138,92,48,0.5);
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.board-wrapper:hover {
+transform: translateY(-2px);
+box-shadow:
+0 26px 55px rgba(0,0,0,0.55),
+inset 0 0 0 1px rgba(255,255,255,0.5),
+inset 0 0 0 12px rgba(138,92,48,0.55);
+}
+
+#carromCanvas {
+display: block;
+border-radius: 24px;
+background: transparent;
+box-shadow:
+0 0 0 4px rgba(120,75,40,0.8),
+0 0 0 16px rgba(54,32,16,0.75),
+0 26px 40px rgba(0,0,0,0.7);
+transition: box-shadow 0.25s ease;
+
+/* important for mobile touch gameplay */
+touch-action: none;
+}
+
+.instructions {
+max-width: 600px;
+text-align: center;
+font-size: 0.9rem;
+opacity: 0.85;
+padding: 4px 10px;
+}
+
+@media (max-width: 700px) {
+
+.board-wrapper {
+padding: 10px;
+}
+
+#carromCanvas {
+width: 90vw;
+height: 90vw;
+}
+
+.hud {
+flex-wrap: wrap;
+}
+
+}

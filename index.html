@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Carrom Pool - Pure JS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game-container">
+
+<header class="hud">
+<div class="hud-item">
+<span class="label">Score:</span>
+<span id="scoreValue">0</span>
+</div>
+
+<div class="hud-item">
+<span class="label">Turn:</span>
+<span id="turnValue">Player 1</span>
+</div>
+
+<button id="restartButton" class="btn">Restart Game</button>
+</header>
+
+<main class="board-wrapper">
+
+<!-- Carrom board canvas -->
+<canvas id="carromCanvas" width="600" height="600"></canvas>
+
+</main>
+
+<footer class="instructions">
+<p>
+Drag from the striker to aim and set power, then release to shoot.
+Sink coins into the corner holes to score.
+</p>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
