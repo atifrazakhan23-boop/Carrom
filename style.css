@@ -21,14 +21,14 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
 }
 
-h1, h2, h3, .logo { font-family: 'Space Grotesk', sans-serif; }
+h1, h2, h3, .logo { font-family: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
 
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
